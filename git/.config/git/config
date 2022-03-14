@@ -1,0 +1,38 @@
+[core]
+  editor = nvim
+  pager = delta
+
+[user]
+  name = Lucas Sampaio
+  email = lucas@sampaio.us
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  side-by-side = true
+
+[commit]
+  verbose = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[rebase]
+  instructionFormat = %s [%an - %ar]
+
+[github]
+  user = lucasnativo
+
+[checkout]
+  defaultRemote = origin
+
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = false
