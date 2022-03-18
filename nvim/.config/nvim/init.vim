@@ -118,6 +118,8 @@ Plug 'kshenoy/vim-signature'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 " enable number columns
@@ -133,7 +135,7 @@ set hidden
 set expandtab
 
 " Change number of spaces that a <Tab> counts for during editing ops.
-set softtabstop=2
+set tabstop=2 softtabstop=2
 
 " Indentation amount for < and > commands.
 set shiftwidth=2
@@ -152,7 +154,7 @@ set cmdheight=1
 set shortmess+=c
 
 " Always keep some lines before/after the current line when scrolling.
-set scrolloff=4
+set scrolloff=8
 
 " Always keep some characters before/after the current column.
 set sidescroll=4
@@ -171,6 +173,9 @@ set autoread
 
 " Disable swap files.
 set noswapfile
+
+" Disable backup file before overwriting
+set nobackup
 
 " Enable persistent undo.
 set undofile
@@ -247,11 +252,14 @@ set background=dark
 " Highlight cursor line
 set cursorline
 
-set completeopt=menu,noinsert,preview
+set completeopt=menu,noinsert,noselect
 
 " ============================================================================ "
 " ===                           PLUGIN SETUP                               === "
 " ============================================================================ "
+
+" Copilot
+let g:copilot_filetypes = { 'markdown': v:true }
 
 " === Vim airline ==== "
 " Enable bufferline integration

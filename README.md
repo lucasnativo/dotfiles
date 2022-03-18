@@ -1,16 +1,25 @@
 # LucasNativo's Dotfiles
 
+On this page, I'll be sharing my dotfiles with you.
+This setup come with a bunch of useful tools and configurations for the Arch Linux.
+
+Here's the list of the tools I'm using: neovim, tmux, zsh, git, nodejs, typescript, stow, ripgrep, fd, wget and much more.
+
 ## Install
    > make
 
 ## Features
 
 ### Neovim
+   > nvim-lspconfig
+   > Plug plugin manager
 
-#### Language Server Protocol
-- nvim-lspconfig
-
-
+### Zsh as default shell
+   > zsh-autosuggestions
+   > zsh-syntax-highlighting
+   > zsh-vi-mode
+   > rupa/z, tracks your most used directories
+   > Powerlevel10k as zsh theme
 
 ### [Rewritten in Rust: Modern Alternatives of Command-Line Tools](https://zaiste.net/posts/shell-commands-rust/)
 

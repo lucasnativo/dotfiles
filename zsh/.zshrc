@@ -66,6 +66,13 @@ function my_zvm_init() {
 
   bindkey '^P' history-beginning-search-backward
   bindkey '^N' history-beginning-search-forward
+
+  # Key bindings for zsh autosuggest
+  bindkey '^i'   complete-word       # tab          | complete
+  bindkey '^ ' autosuggest-accept  # ctrl + space  | autosuggest
+  ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(buffer-empty bracketed-paste accept-line push-line-or-edit)
+  ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+  ZSH_AUTOSUGGEST_USE_ASYNC=true
 }
 
 zvm_after_init_commands+=(my_zvm_init)
@@ -127,10 +134,11 @@ alias cat="bat"
 alias ccat="cat"
 
 # Exe
-alias l="exa -la --group-directories-first --icons"
+alias ls="exa -la --group-directories-first --icons"
 
 # ls fallback
-alias ls="ls -lha --color=auto"
+alias l="ls -lha --color=auto"
 
 # ripgrep
 alias grep="rg"
+
